@@ -1,7 +1,7 @@
 import "./app.css";
 import { Fragment, useEffect, useState } from "react";
 import Unity, { UnityContext } from "react-unity-webgl";
-
+import { ConnectWalletButton } from "@gokiprotocol/walletkit";
 interface Vector2 {
   x: number;
   y: number;
@@ -119,6 +119,7 @@ function App() {
           in action.
         </p>
         {/* Some buttons to interact */}
+        <ConnectWalletButton />
         <button onClick={handleOnClickUnMountUnity}>(Un)mount Unity</button>
         <button onClick={handleOnClickIncreaseSpeed}>Increase speed</button>
         <button onClick={handleOnClickDecreaseSpeed}>Decrease speed</button>

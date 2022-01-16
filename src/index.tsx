@@ -3,13 +3,19 @@ import { render } from "react-dom";
 import App from "./app";
 import reportWebVitals from "./report-web-vitals";
 import "./index.css";
-
+import { WalletKitProvider } from "@gokiprotocol/walletkit";
 const rootElement = document.getElementById("root");
 
 // renders the app onto the document
 render(
   <StrictMode>
-    <App />
+    <WalletKitProvider
+      app={{
+        name: "My App",
+      }}
+    >
+      <App />
+    </WalletKitProvider>
   </StrictMode>,
   rootElement
 );
